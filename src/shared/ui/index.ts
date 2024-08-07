@@ -1,7 +1,7 @@
-import Container from "./container/container";
-import Wrapper from "./wrapper/wrapper";
+import { Logo } from './logo'
+import { Button } from './custom-button'
 
 export {
-    Container,
-    Wrapper
+    Logo,
+    Button
 }
