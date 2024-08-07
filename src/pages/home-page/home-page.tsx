@@ -1,7 +1,8 @@
+import { Button } from '@/src/shared/ui'
+
 const HomePage: React.FC = () => {
 	return (
-		<div className='text-center text-3xl text-secondary-light-green'>
-			This is home page!
+		<div>
 		</div>
 	)
 }

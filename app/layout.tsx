@@ -6,8 +6,8 @@ import { Providers } from "./providers";
 
 import { siteConfig } from "@/src/app/config/site";
 import { fontSans } from "@/src/app/config/fonts";
+import { Header } from '@/src/widgets/header'
 
-import { Button } from '@/src/shared/ui'
 
 
 
@@ -44,6 +44,7 @@ export default function RootLayout({
         )}
       >
         <Providers themeProps={{ attribute: "class", defaultTheme: "light" }}>
+          <Header/>
           <main>
             {children}
           </main>
