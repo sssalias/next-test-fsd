@@ -13,7 +13,6 @@ const HomePage: React.FC = () => {
 				variant='bordered'
 				isInvalid={true}
 				errorMessage='Please enter a valid email'
-				children={undefined}
 			/>
 		</div>
 	)

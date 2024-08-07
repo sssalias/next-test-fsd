@@ -1,7 +1,7 @@
 import { Input } from '@nextui-org/input'
 
 type Props = {
-	children: React.ReactNode
+	children?: React.ReactNode
 	type?: 'email' | 'password'
 	label?: string
 	placeholder?: string
