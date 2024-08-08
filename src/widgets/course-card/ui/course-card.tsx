@@ -3,14 +3,17 @@ import { Button } from '@/src/shared/ui'
 // TODO: Переделай компонент карточтки:
 // 		1) Чекни nextUi card;
 // 		2) Она должна быть выстроена по относительным величинам, => 
-// 			юзай padding, чтобы не писать для карточки отдельные media quries
-// 		3) Также сделай пропсы, ведь карточка это лишь элемент курса + скорее всего,
-// 			Карточка должна быть элментом в models, ведь она не выполняет бизнес логики кроме отображения курса,
-// 			а widgets по методолгии - связь модели и бизнес логики => в нашей ситуации widget'ом будет CoursesList
+// 			юзай padding, чтобы не писать для карточки отдельные media quries.
+// 			Избегай в таких случаях использования  фиксированных величин.
+// 		3) Наша карточка должна быть описана по сущности, т.е мы создаём её не в слое widgets, а в слое entities: 
+// 			- создаёшь срез model, там описываешь имплементацию карточки, т.е interface и поля, которые карточка содержит
+// 			- создаёшь срез ui, там описываешь код карточки + пропсы, которые построены по interface (это нужно, ведь наша карточка только отображает данные и не более)
+//
 
 
 const CourseCard: React.FC = () => {
 	return (
+		// Юзай next ui - https://nextui.org/docs/components/card
 		<div>
 			<div className='m-16 w-[347px] h-[488px] p-[15px] shadow-xl rounded-md bg-white'>
 				<img
@@ -25,6 +28,7 @@ const CourseCard: React.FC = () => {
 						alt='avatar'
 						className='w-5 h-5 rounded-full'
 					/>
+					{/* Без margins, юзай flexbox */}
 					<div className='flex flex-col items-center'>
 						<div className='w-full '></div>
 						<p className='text-large mt-[2px] font-semibold'>Mr. Kowlad</p>
