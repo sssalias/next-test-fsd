@@ -17,6 +17,7 @@ module.exports = {
 					'2xl': ['32px', '32px'], // banner 2
 					sm: ['14px', '20px'], // body text
 					base: ['16px', '20px'], // text body
+					cardtitle: ['24px', '24px'], // card title
 				},
 			},
 			themes: {

@@ -6,6 +6,7 @@ type Props = {
 	color?: 'default' | 'primary' | 'secondary' | 'success' | 'warning' | 'danger'
 	isDisabled?: boolean
 	isIconOnly?: boolean
+	className?: string
 }
 const CustomButton: React.FC<Props> = props => {
 	return <Button {...props} />
