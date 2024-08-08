@@ -1,5 +1,3 @@
-import { Container, Wrapper } from '@/src/shared/ui'
-
 import { Navbar, NavbarContent, NavbarItem } from '@nextui-org/navbar'
 import { Input } from '@nextui-org/input'
 import { User } from '@nextui-org/user'
@@ -11,7 +9,7 @@ import { Button } from '@nextui-org/button'
 
 const Header: React.FC = () => {
     return (
-        <Navbar className='z-0 pl-[150px] py-3 shadow-sm' maxWidth='2xl'>
+        <Navbar className='bg-white z-[11] pl-[150px] py-3 shadow-sm' maxWidth='2xl' position='sticky'>
             <NavbarContent>
                 <NavbarItem>
                      <Input

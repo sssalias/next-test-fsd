@@ -57,7 +57,7 @@ const Aside: React.FC = () => {
     const [isOpen, setOpen] = useState(true)
 
     return (
-        <aside className={clsx('fixed h-full z-10 shadow-md bg-white',isOpen ? 'w-[250px]' : 'w-[75px]')}>
+        <aside className={clsx('fixed h-full z-[15] shadow-md bg-white transition-all',isOpen ? 'w-[250px]' : 'w-[75px]')}>
             <Container className='w-3/4'>
                 <Wrapper className='flex flex-col justify-between items-center'>
                     {/* brand */}
@@ -73,7 +73,7 @@ const Aside: React.FC = () => {
                         <nav>
                             <ul className='flex flex-col items-center'>
                                 {navigation.map(el => (
-                                    <li className='w-full rounded-xl hover:bg-gray-100'>
+                                    <li key={el.label} className='w-full rounded-xl hover:bg-gray-100'>
                                         <Link href={el.route} className='flex items-center gap-4 py-4 px-5 w-full text-primary-grey'>
                                             <i>{el.icon}</i>
                                             {isOpen ? <span className='text-sm font-semibold'>{el.label}</span> : null}

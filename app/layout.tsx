@@ -48,7 +48,7 @@ export default function RootLayout({
         <Providers themeProps={{ attribute: "class", defaultTheme: "light" }}>
           <Aside/>
           <Header/>
-          <main className='ml-[250px]'>
+          <main className='z-0 ml-[250px]'>
             <div className='my-10 mx-auto w-11/12'>
               {children}
             </div>
