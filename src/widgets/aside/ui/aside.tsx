@@ -1,52 +1,86 @@
-import { Container, Wrapper } from '@/src/shared/ui'
+'use client'
 
+import { Container, Logo, Wrapper } from '@/src/shared/ui'
+import Link from 'next/link'
+
+import { AiFillAppstore, AiFillMessage, AiFillSetting } from 'react-icons/ai'
+
+import { FaBook, FaUser, FaArrowLeft, FaArrowRight } from 'react-icons/fa'
+
+import { PiChalkboardTeacherFill } from 'react-icons/pi'
+
+import { GiAchievement } from 'react-icons/gi'
+import { useState } from 'react'
+import clsx from 'clsx'
+ 
 const Aside: React.FC = () => {
 
     const navigation = [
         {
             route: '/',
-            label: 'Статистика'
+            label: 'Статистика',
+            icon: <AiFillAppstore size={18}/>,
         },
         {
             route: '/',
-            label: 'Статистика'
+            label: 'Профиль',
+            icon: <FaUser size={18}/>
         },
         {
             route: '/',
-            label: 'Статистика'
+            label: 'Преподавание',
+            icon: <PiChalkboardTeacherFill size={18} />
         },
         {
             route: '/',
-            label: 'Статистика'
+            label: 'Курсы',
+            icon: <FaBook size={18}/>
         },
         {
             route: '/',
-            label: 'Статистика'
+            label: 'Достижения',
+            icon: <GiAchievement size={18}/> 
         },
         {
             route: '/',
-            label: 'Статистика'
+            label: 'Сообщения',
+            icon: <AiFillMessage size={18}/> 
         },
         {
             route: '/',
-            label: 'Статистика'
-        },
+            label: 'Настройки',
+            icon: <AiFillSetting size={18}/> 
+        }
     ]
 
+
+    const [isOpen, setOpen] = useState(true)
+
     return (
-        <aside className='w-[250px] absolute'>
+        <aside className={clsx('absolute h-full z-10 shadow-md bg-white',isOpen ? 'w-[250px]' : 'w-[75px]')}>
             <Container>
-                <Wrapper className='flex flex-col'>
+                <Wrapper className='flex flex-col justify-between items-center'>
                     {/* brand */}
-                    <div className=''>
+                    <div className='py-3'>
                         {/* logo */}
-                        <div className=''></div>
-                        <h1 className='uppercase'>неясыть</h1>
+                        <Logo isIconOnly={!isOpen}/>
                     </div>
                     {/* content */}
-                    <div className=''>
+                    <div className='w-full relative'>
+                        <button onClick={() => setOpen(!isOpen)} className='absolute right-[-45px] top-[45px] text-primary-grey p-2 rounded-xl shadow-md bg-white'>
+                            <i>{isOpen ? <FaArrowLeft/> : <FaArrowRight/>}</i>
+                        </button>
                         <nav>
-
+                            <ul className='flex flex-col items-center'>
+                                {navigation.map(el => (
+                                    <li className='w-full rounded-xl hover:bg-gray-100'>
+                                        <Link href={el.route} className='flex items-center gap-4 py-4 px-5 w-full text-primary-grey'>
+                                            <i>{el.icon}</i>
+                                            {isOpen ? <span className='text-sm font-semibold'>{el.label}</span> : null}
+                                        </Link>
+                                    </li>
+                                ))}
+                            </ul>
                         </nav>
                     </div>
                 </Wrapper>

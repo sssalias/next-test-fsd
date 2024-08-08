@@ -1,6 +1,19 @@
-const Logo: React.FC = () => {
+import Image from 'next/image'
+import logoImg from '@/src/shared/assets/icons/logo.png'
+
+type Props = {
+    isIconOnly?:boolean
+}
+
+const Logo: React.FC<Props> = props => {
     return (
-        <h3 className='text-2xl text-gray-400'>Logo</h3>
+        <div className='flex items-center gap-2'>
+            <Image
+                src={logoImg}
+                alt='logo'
+            />
+            {!props.isIconOnly ? <h1 className='text-[29px] uppercase text-base-900'>Неясыть</h1> : null}
+        </div>
     )
 }
 

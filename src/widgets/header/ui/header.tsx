@@ -14,7 +14,7 @@ const Header: React.FC = () => {
         <header className='shadow-md'>
             <Container>
                 <Wrapper className='py-3'>
-                    <Navbar maxWidth='full'>
+                    <Navbar className='z-2' maxWidth='full'>
                         <NavbarContent>
                             <NavbarItem>
                                 <Input
