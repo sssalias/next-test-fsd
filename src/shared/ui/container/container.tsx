@@ -6,7 +6,7 @@ type Props = {
 }
 const Container: React.FC<Props> = props => {
     return (
-        <div className={clsx('container mx-auto w-3/4', props.className)}>
+        <div className={clsx('container mx-auto w-3/4 h-full', props.className)}>
             {props.children}
         </div>
     )

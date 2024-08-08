@@ -6,13 +6,6 @@ const CoursesList: React.FC = () => {
 	const courses = [
 		{
 			img: 'https://nextui.org/images/hero-card-complete.jpeg',
-			title: 'Негры пидорасы',
-			author: 'Mr.Kowlad',
-			authorImg: 'https://i.pravatar.cc/150?u=a04258114e29026702d',
-			about: 'Курс по Motion Design для начинающих'
-		},
-		{
-			img: 'https://nextui.org/images/hero-card-complete.jpeg',
 			title: 'Курс Motion Design Базовый',
 			author: 'Mr.Kowlad',
 			authorImg: 'https://i.pravatar.cc/150?u=a04258114e29026702d',
