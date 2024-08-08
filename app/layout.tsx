@@ -8,6 +8,7 @@ import { siteConfig } from "@/src/app/config/site";
 import { fontSans } from "@/src/app/config/fonts";
 import { Header } from '@/src/widgets/header'
 import { Aside } from '@/src/widgets/aside'
+import { Container } from '@/src/shared/ui'
 
 
 
@@ -48,7 +49,9 @@ export default function RootLayout({
           <Aside/>
           <Header/>
           <main className='ml-[250px]'>
-            {children}
+            <div className='my-10 mx-auto w-11/12'>
+              {children}
+            </div>
           </main>
         </Providers>
       </body>

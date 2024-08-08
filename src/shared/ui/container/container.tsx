@@ -1,9 +1,12 @@
+import clsx from 'clsx'
+
 type Props = {
-    children: React.ReactNode
+    children: React.ReactNode,
+    className?: string
 }
 const Container: React.FC<Props> = props => {
     return (
-        <div className='container mx-auto w-3/4'>
+        <div className={clsx('container mx-auto w-3/4', props.className)}>
             {props.children}
         </div>
     )

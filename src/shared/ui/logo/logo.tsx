@@ -7,7 +7,7 @@ type Props = {
 
 const Logo: React.FC<Props> = props => {
     return (
-        <div className='flex items-center gap-2'>
+        <div className='flex items-center gap-2 h-[70px]'>
             <Image
                 src={logoImg}
                 alt='logo'

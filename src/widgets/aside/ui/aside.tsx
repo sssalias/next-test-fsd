@@ -57,8 +57,8 @@ const Aside: React.FC = () => {
     const [isOpen, setOpen] = useState(true)
 
     return (
-        <aside className={clsx('absolute h-full z-10 shadow-md bg-white',isOpen ? 'w-[250px]' : 'w-[75px]')}>
-            <Container>
+        <aside className={clsx('fixed h-full z-10 shadow-md bg-white',isOpen ? 'w-[250px]' : 'w-[75px]')}>
+            <Container className='w-3/4'>
                 <Wrapper className='flex flex-col justify-between items-center'>
                     {/* brand */}
                     <div className='py-3'>
