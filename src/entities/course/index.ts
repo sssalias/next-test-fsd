@@ -1,11 +1,11 @@
 import { Course } from './model'
-import { CourseImage } from './ui'
-
+import { CourseImage, CourseCard } from './ui'
 
 export type {
     Course
 }
 
 export {
-    CourseImage
+    CourseImage,
+    CourseCard
 }

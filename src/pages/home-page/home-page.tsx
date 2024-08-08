@@ -1,11 +1,13 @@
-import { CourseCard } from '@/src/widgets/course-card'
+import { CoursesList } from '@/src/widgets/courses-list'
 
 const HomePage: React.FC = () => {
+
+
 	return (
-		<div>
+		<>
 			<h2>Курсы</h2>
-			<CourseCard />
-		</div>
+			<CoursesList/>
+		</>
 	)
 }
 

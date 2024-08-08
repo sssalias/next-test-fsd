@@ -13,6 +13,7 @@ module.exports = {
 		nextui({
 			layout: {
 				fontSize: {
+					xs: ['12', '20'],
 					large: ['10px', '10px'],
 					'2xl': ['32px', '32px'], // banner 2
 					sm: ['14px', '20px'], // body text

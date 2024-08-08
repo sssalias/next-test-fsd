@@ -49,7 +49,7 @@ export default function RootLayout({
           <Aside/>
           <Header/>
           <main className='z-0 ml-[250px]'>
-            <div className='my-10 mx-auto w-11/12'>
+            <div className='flex flex-col gap-10 my-10 mx-auto w-11/12'>
               {children}
             </div>
           </main>
