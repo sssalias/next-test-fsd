@@ -1,4 +1,5 @@
 import { Button } from '@nextui-org/button'
+import clsx from 'clsx'
 
 type Props = {
 	children: React.ReactNode
@@ -9,7 +10,7 @@ type Props = {
 	className?: string
 }
 const CustomButton: React.FC<Props> = props => {
-	return <Button {...props} />
+	return <Button {...props} className={clsx('text-base font-semibold', props.className)}/>
 }
 
 export default CustomButton

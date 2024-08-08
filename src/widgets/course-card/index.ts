@@ -1,3 +1,3 @@
-import { Ccard } from './ui'
+import { CourseCard } from './ui'
 
-export { Ccard }
+export { CourseCard }

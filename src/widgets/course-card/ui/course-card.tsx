@@ -1,6 +1,15 @@
 import { Button } from '@/src/shared/ui'
 
-const Ccard: React.FC = () => {
+// TODO: Переделай компонент карточтки:
+// 		1) Чекни nextUi card;
+// 		2) Она должна быть выстроена по относительным величинам, => 
+// 			юзай padding, чтобы не писать для карточки отдельные media quries
+// 		3) Также сделай пропсы, ведь карточка это лишь элемент курса + скорее всего,
+// 			Карточка должна быть элментом в models, ведь она не выполняет бизнес логики кроме отображения курса,
+// 			а widgets по методолгии - связь модели и бизнес логики => в нашей ситуации widget'ом будет CoursesList
+
+
+const CourseCard: React.FC = () => {
 	return (
 		<div>
 			<div className='m-16 w-[347px] h-[488px] p-[15px] shadow-xl rounded-md bg-white'>
@@ -21,14 +30,14 @@ const Ccard: React.FC = () => {
 						<p className='text-large mt-[2px] font-semibold'>Mr. Kowlad</p>
 					</div>
 				</div>
-				<p className='text-large  '>Курс по Motion Design для начинающих</p>
+				<p className='text-large'>Курс по Motion Design для начинающих</p>
 				<div>
 					<Button
 						variant='solid'
-						color='success'
+						color='primary'
 						className='w-full h-[34px] mt-[22px] text-large text-white'
 					>
-						НАЧАТЬ
+						Начать
 					</Button>
 				</div>
 			</div>
@@ -36,4 +45,4 @@ const Ccard: React.FC = () => {
 	)
 }
 
-export default Ccard
+export default CourseCard

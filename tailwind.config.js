@@ -72,13 +72,13 @@ module.exports = {
 						'gradient-blue': '#21A5EE - #006FEE', // Градиент от светло-синего к синему
 						'gradient-red': '#EF5050 - #F12727', // Градиент от красного к тёмно-красному
 
-						primary: {
-							DEFAULT: 'blue',
-							foreground: 'black',
-						},
-						focus: {
-							DEFAULT: 'black',
-						},
+						// primary: {
+						// 	DEFAULT: '#21A5EE',
+						// 	foreground: 'black',
+						// },
+						// focus: {
+						// 	DEFAULT: 'black',
+						// },
 					},
 				},
 			},

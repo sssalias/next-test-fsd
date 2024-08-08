@@ -1,9 +1,9 @@
-import { Ccard } from '@/src/widgets/course-card'
+import { CourseCard } from '@/src/widgets/course-card'
 
 const HomePage: React.FC = () => {
 	return (
 		<div>
-			<Ccard />
+			<CourseCard />
 		</div>
 	)
 }
